@@ -23,7 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '2wl+!s0n-ztwo@b#)+_k)=^-n!*@073127l&scxo69a4k2iw38'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Buvo DEBUG = True kol developinom ant vagrant serverio
+# Dabar jei nebus conf nurodyta duos 1 ir jis taps True
+DEBUG = bool(int(os.environ.get('DEBUG', 1)))
 
 ALLOWED_HOSTS = []
 
@@ -123,3 +125,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'profiles_api.UserProfile'
+
+STATIC_ROOT ='static/'
