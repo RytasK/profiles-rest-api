@@ -27,7 +27,10 @@ SECRET_KEY = '2wl+!s0n-ztwo@b#)+_k)=^-n!*@073127l&scxo69a4k2iw38'
 # Dabar jei nebus conf nurodyta duos 1 ir jis taps True
 DEBUG = bool(int(os.environ.get('DEBUG', 1)))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'ec2-52-59-192-117.eu-central-1.compute.amazonaws.com',
+    '127.0.0.1'
+]
 
 
 # Application definition
